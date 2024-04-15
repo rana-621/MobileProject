@@ -11,38 +11,38 @@ void main() async {
   bool onBoarding = sharedPreferences.getBool("onboarding") ?? false;
 
   MaterialApp materialApp = MaterialApp(
-    home: onBoarding ? RegisterationPage() : OnBoardingPage(),
-    // onGenerateRoute: MyRoutes.onGenerateRoute,
-    // onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
+    // home: onBoarding ? RegisterationPage() : OnBoardingPage(),
+    onGenerateRoute: MyRoutes.onGenerateRoute,
+    onGenerateInitialRoutes: (_) => MyRoutes.initRoutes,
   );
   runApp(materialApp);
 }
 
-// //Routes Of the Create New Account Page and Registeration Page
-// class MyRoutes {
-//   static List<Route> initRoutes = [
-//     MaterialPageRoute<dynamic>(
-//       builder: (BuildContext context) => const OnBoardingPage(),
-//     ),
-//     MaterialPageRoute<void>(
-//       builder: (BuildContext context) => const RegisterationPage(),
-//     ),
-//   ];
+//Routes Of the Create New Account Page and Registeration Page
+class MyRoutes {
+  static List<Route> initRoutes = [
+    MaterialPageRoute<dynamic>(
+      builder: (BuildContext context) => const OnBoardingPage(),
+    ),
+    MaterialPageRoute<void>(
+      builder: (BuildContext context) => const RegisterationPage(),
+    ),
+  ];
 
-//   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
-//     switch (settings.name) {
-//       case 'create new account':
-//         return MaterialPageRoute<dynamic>(
-//           builder: (BuildContext context) => const CreateNewAccountPage(),
-//         );
-//       case 'register':
-//         return MaterialPageRoute<dynamic>(
-//           builder: (BuildContext context) => const RegisterationPage(),
-//         );
-//       default:
-//         return MaterialPageRoute<dynamic>(
-//           builder: (BuildContext context) => const OnBoardingPage(),
-//         );
-//     }
-//   }
-// }
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case 'create new account':
+        return MaterialPageRoute<dynamic>(
+          builder: (BuildContext context) => const CreateNewAccountPage(),
+        );
+      case 'register':
+        return MaterialPageRoute<dynamic>(
+          builder: (BuildContext context) => const RegisterationPage(),
+        );
+      default:
+        return MaterialPageRoute<dynamic>(
+          builder: (BuildContext context) => const OnBoardingPage(),
+        );
+    }
+  }
+}
