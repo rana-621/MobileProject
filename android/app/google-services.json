@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "533228865856",
+    "project_id": "traingcourse-ed4fd",
+    "storage_bucket": "traingcourse-ed4fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533228865856:android:6eac5d73dd72a8e32f52a5",
+        "android_client_info": {
+          "package_name": "com.example.newappflutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQIv6sy1m5VVXNyKMpiHi5LV1K5D1eP9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
