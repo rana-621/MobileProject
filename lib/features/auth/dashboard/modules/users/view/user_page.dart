@@ -36,6 +36,13 @@ class UserPage extends StatelessWidget {
                         //     ),
                         itemCount: controller.users.length,
                         itemBuilder: (_, int index)=>Text(controller.users[index].name ??'xxx') ),
+                    /*ListView.builder(
+                      itemCount: controller.users.length,
+                      itemBuilder: (_,int index){
+                     return Text(controller.users[index].name?? 'xxx');
+
+                    })*/
+      
           );
         },
       ),

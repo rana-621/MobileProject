@@ -26,4 +26,6 @@ class RegisterationCubit extends Cubit<RegisterationState> {
       print('Invalid inputs');
     }
   }
+
+  addUser() {}
 }

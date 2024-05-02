@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newappflutter/features/auth/dashboard/controller/cubit/dashboard_cubit.dart';
 import 'package:newappflutter/features/auth/dashboard/modules/users/view/user_page.dart';
 import 'package:newappflutter/features/auth/registeration/view/pages/registeration_page.dart';
+import 'package:get/get.dart';
 
 class Dashboard extends StatelessWidget {
  final List<String> titles= const['home','user','service'];
@@ -20,11 +21,15 @@ class Dashboard extends StatelessWidget {
                 return Scaffold(
                                   appBar: AppBar(
                                    backgroundColor: Colors.indigo,
-                                   title: Text(titles[cubit.selectedTabIndex]),
+                                   title: Text(titles[cubit.selectedTabIndex],style: TextStyle(color: Colors.white),),
                                    actions: [
                                     IconButton(onPressed: (){
-                                     // Navigator.push(context, 'RegisterationPage' as Route<Object?>);
-                                    }, icon: Icon(Icons.add))
+                                     // Navigator.push(context, "register" as Route<Object?>);
+                                       Navigator.push(
+                                                       context,
+                                                        MaterialPageRoute(builder: (context) => RegisterationPage()),
+                                                               );
+                                    }, icon: Icon(Icons.settings),color: Colors.white),
                                    ],
                                   ),
                                   body: PageView(

@@ -1,9 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:newappflutter/features/auth/dashboard/modules/users/view/model/repo/local_db_data.dart';
 import 'package:newappflutter/features/auth/registeration/controller/cubit/registeration_cubit.dart';
 import 'package:newappflutter/features/auth/registeration/view/pages/create_account_page.dart';
 import 'package:newappflutter/features/auth/registeration/view/pages/forget_password.dart';
 import 'package:newappflutter/features/auth/registeration/view/pages/verification_page.dart';
+import 'package:sqflite/sqflite.dart';
 
 class BottomNavigationWiidget extends StatelessWidget {
   const BottomNavigationWiidget({Key? key, required this.controller});
@@ -18,6 +22,8 @@ class BottomNavigationWiidget extends StatelessWidget {
         builder: (context, state) {
           return Column(
             children: [
+              
+              const SizedBox(height: 12),
               ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
@@ -39,7 +45,7 @@ class BottomNavigationWiidget extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 12),
               ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
@@ -62,7 +68,7 @@ class BottomNavigationWiidget extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 12),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
